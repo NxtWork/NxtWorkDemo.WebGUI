@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxtWorkDemo.WebUI", "NxtWorkDemo.WebUI\NxtWorkDemo.WebUI.csproj", "{43337D42-A680-4294-AF26-B68A6390B241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43337D42-A680-4294-AF26-B68A6390B241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43337D42-A680-4294-AF26-B68A6390B241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43337D42-A680-4294-AF26-B68A6390B241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43337D42-A680-4294-AF26-B68A6390B241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55C2FD8C-02C4-496E-ABD8-30106A94CC44}
+	EndGlobalSection
+EndGlobal

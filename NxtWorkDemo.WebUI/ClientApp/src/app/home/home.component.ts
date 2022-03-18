@@ -21,7 +21,7 @@ interface Vacancy {
   id: string;
   title: string;
   description: string;
-  tumbnailImage: string;
+  thumbnail_image: string;
   requirements: Requirement[];
   company: Company;
   companyId: string;

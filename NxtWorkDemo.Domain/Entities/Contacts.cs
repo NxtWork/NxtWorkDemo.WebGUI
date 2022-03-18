@@ -1,4 +1,4 @@
-﻿namespace NxtWorkDemo.WebUI.Domain
+﻿namespace NxtWorkDemo.Core.Entities
 {
     public class Contacts
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NxtWorkDemo.WebUI.Domain
+namespace NxtWorkDemo.Core.Entities
 {
     public class Company
     {

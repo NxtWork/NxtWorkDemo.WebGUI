@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NxtWorkDemo.Core.DataServices;
+using NxtWorkDemo.Core.Options;
+using NxtWorkDemo.Infrastructure.DataServices;
+using System;
 
 namespace NxtWorkDemo.WebUI
 {
@@ -25,6 +29,16 @@ namespace NxtWorkDemo.WebUI
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
+            });
+
+            // register config server options to access endpoints
+            services.Configure<ServerOptions>(Configuration.GetSection(nameof(ServerOptions)));
+            
+            services.AddHttpClient<IVacancyService, VacancyService>(o =>
+            {
+                var serverOptions = new ServerOptions();
+                Configuration.GetSection(nameof(ServerOptions)).Bind(serverOptions);
+                o.BaseAddress = new Uri(serverOptions.BaseAddress);
             });
         }
 

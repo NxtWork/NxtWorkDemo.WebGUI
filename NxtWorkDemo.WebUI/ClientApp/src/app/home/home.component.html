@@ -13,41 +13,4 @@
 </ul>
 <p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>-->
 
-<h1 id="tableLabel" class="text-center" style="margin-bottom: 30px;">Top Vakances</h1>
-
-<p *ngIf="!vacancies"><em>Ielādē...</em></p>
-
-<div class="container" *ngIf="vacancies">
-  <div class="card-columns"> <!--row-->
-    <div *ngFor="let vacancy of vacancies"> <!--class="col-sm-6"-->
-      <div class="card nxt-border mb-5">
-        <!--<div class="img-container">
-    <img [src]="vacancy.tumbnailImage" alt="job_img" class="card-img-top" style="width: 100%; " />
-    <div class="bottom-left d-flex justify-content-between" style="width: 100%;">
-      <h1 class="card-title font-weight-bold" style="margin-left: 20px;">{{ vacancy.salary }}</h1>-->
-        <!--style="text-shadow: 2px 2px black;"-->
-        <!--</div>
-
-    </div>-->
-        <img [src]="vacancy.thumbnail_image" alt="job_img" class="card-img-top card-img img-fluid" />
-        <div class="card-header nxt-border">
-          <h5 class="card-title vac-text font-weight-bold">{{ vacancy.salary }}</h5>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold">{{ vacancy.title }}</h5>
-          <p class="card-text text-truncate">{{ vacancy.description }}</p> <!--card-subtitle text-muted-->
-        </div>
-        <ul class="list-group list-group-flush border-top border-bottom">
-          <li class="list-group-item">
-            <h5 class="card-subtitle text-muted">{{ vacancy.company.name }}</h5>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="btn nxt-button">Skatīt</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TODO: fix issue with card height -->
+<app-vacancy-list></app-vacancy-list>

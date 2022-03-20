@@ -27,5 +27,10 @@ namespace NxtWorkDemo.Infrastructure.DataServices
         {
             return await _httpClient.GetFromJsonAsync<IEnumerable<Vacancy>>(_serverOptions.Value.VacanciesEndpoint);
         }
+
+        public async Task<Vacancy> GetVacancy(Guid id)
+        {
+            return await _httpClient.GetFromJsonAsync<Vacancy>(_serverOptions.Value.VacanciesEndpoint + $"/{id}");
+        }
     }
 }

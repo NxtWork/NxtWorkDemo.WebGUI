@@ -1,0 +1,28 @@
+<div class="card nxt-border mb-5 shadow-sm" [routerLink]="['/vacancies', vacancy.id]">
+  <!--<div class="img-container">
+  <img [src]="vacancy.tumbnailImage" alt="job_img" class="card-img-top" style="width: 100%; " />
+  <div class="bottom-left d-flex justify-content-between" style="width: 100%;">
+    <h1 class="card-title font-weight-bold" style="margin-left: 20px;">{{ vacancy.salary }}</h1>-->
+  <!--style="text-shadow: 2px 2px black;"-->
+  <!--</div>
+
+  </div>-->
+  <div *ngIf="vacancy?.thumbnail_image">
+    <img [src]="vacancy?.thumbnail_image" alt="job_img" class="card-img-top card-img img-fluid" />
+  </div>
+  <div class="card-header" *ngIf="vacancy?.salary"> <!--nxt-border-->
+    <h5 class="card-title vac-text font-weight-bold">{{ vacancy?.salary }}</h5>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title font-weight-bold">{{ vacancy?.title }}</h4>
+    <p class="card-text text-truncate">{{ vacancy?.description }}</p>
+  </div>
+  <ul class="list-group list-group-flush border-top border-bottom">
+    <li class="list-group-item">
+      <h5 class="card-subtitle">{{ vacancy?.company?.name }}</h5>
+    </li>
+  </ul>
+  <div class="card-body">
+    <a [routerLink]="['/vacancies', vacancy.id]" class="btn nxt-button">Skatīt</a> <!--(click)="vacancyInfoClick()"-->
+  </div>
+</div>

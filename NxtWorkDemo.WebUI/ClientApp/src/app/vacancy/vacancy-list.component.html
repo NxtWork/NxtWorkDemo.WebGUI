@@ -1,0 +1,14 @@
+<div class="container" *ngIf="vacancies">
+  <h1 style="margin-bottom: 30px; margin-top: 30px;">Top Vakances</h1>
+  <p *ngIf="!vacancies"><em>Ielādē...</em></p>
+  <div class="row">
+    <!--card-columns-->
+    <div class="col-sm-4" *ngFor="let vacancy of vacancies">
+      <!--class="col-sm-6"-->
+      <app-vacancy-card [vacancy]="vacancy"></app-vacancy-card> <!--(vacancyClick)="handleVacancyClicked($vacancy)"--> <!--#vcard-->
+
+      <!--<button class="btn dark" (click)="vcard.logSus()">Sus</button>
+  <h3>{{vcard.vacancy.title}}</h3>-->
+    </div>
+  </div>
+</div>

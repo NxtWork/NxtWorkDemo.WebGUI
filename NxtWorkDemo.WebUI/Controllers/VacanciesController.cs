@@ -56,13 +56,21 @@ namespace NxtWorkDemo.WebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vacancy>>> Get()
+        public async Task<ActionResult<IEnumerable<Vacancy>>> GetAll()
         {
             // _logger.LogInformation($"Return {_vacancies.Count} vacancies");
             // return Ok(_vacancies);
 
             var result = (List<Vacancy>) await _vacancyService.GetAllVacancies();
             _logger.LogInformation($"Returns {result.Count}");
+            return result;
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Vacancy>> GetById(Guid id)
+        {
+            var result = await _vacancyService.GetVacancy(id);
+            _logger.LogInformation($"{result.Title}-{result.Company.Name}");
             return result;
         }
     }

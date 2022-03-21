@@ -11,8 +11,12 @@
       <div><strong>Atalgojums: </strong>{{ vacancy?.salary }}</div>
       <div><strong>Apraksts: </strong>{{ vacancy?.description }}</div>
       <hr />
+    </div>
+    <div class="col-md-6">
       <div><strong>Uzņēmums: </strong><a href="#">{{ vacancy?.company?.name }}</a></div>
       <hr />
+    </div>
+    <div class="col-md-6">
       <div>
         <strong>Prasības: </strong>
         <ul *ngFor="let requirement of vacancy?.requirements" class="list-group">
@@ -22,6 +26,9 @@
         </ul>
       </div>
       <hr />
+    </div>
+    <div class="col-md-6">
+
       <div>
         <strong>Kontakti: </strong>
         <ul class="list-group">
@@ -31,6 +38,16 @@
           <li class="list-group-item"><strong>Adrese: </strong>{{ vacancy?.contacts?.address }}</li>
         </ul>
       </div>
+      <hr />
     </div>
+    <div class="row mb-5" style="width: 100%;">
+      <div class="col-md-6">
+        <a href="#" class="btn btn-outline-success btn-block">Apply</a>
+      </div>
+      <div class="col-md-6">
+        <a href="#" class="btn btn-outline-primary btn-block">Contact</a>
+      </div>
+    </div>
+    <a href="/"><i class="bi bi-arrow-left"></i> Atpakaļ pie vakancēm</a>
   </div>
 </div>

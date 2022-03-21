@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NxtWorkDemo.WebUI.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class VacanciesController : ControllerBase
     {

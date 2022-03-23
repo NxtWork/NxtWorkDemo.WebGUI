@@ -16,3 +16,16 @@ html {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.navbar {
+  border-bottom: 1px solid #ff5722;
+}
+
+.navbar-brand {
+  color: #ff5722;
+}
+
+.nav-link {
+  color: #ff5722;
+  font-weight: bold;
+}

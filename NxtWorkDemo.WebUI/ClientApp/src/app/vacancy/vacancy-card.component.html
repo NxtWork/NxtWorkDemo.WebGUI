@@ -1,16 +1,10 @@
-<div class="card nxt-border mb-5 shadow-sm" [routerLink]="['/vacancies', vacancy.id]">
-  <!--<div class="img-container">
-  <img [src]="vacancy.tumbnailImage" alt="job_img" class="card-img-top" style="width: 100%; " />
-  <div class="bottom-left d-flex justify-content-between" style="width: 100%;">
-    <h1 class="card-title font-weight-bold" style="margin-left: 20px;">{{ vacancy.salary }}</h1>-->
-  <!--style="text-shadow: 2px 2px black;"-->
-  <!--</div>
-
-  </div>-->
+<div class="card nxt-border mb-5 " [routerLink]="['/vacancies', vacancy.id]">
+  <!--shadow-sm-->
   <div *ngIf="vacancy?.thumbnail_image">
     <img [src]="vacancy?.thumbnail_image" alt="job_img" class="card-img-top card-img img-fluid" />
   </div>
-  <div class="card-header" *ngIf="vacancy?.salary"> <!--nxt-border-->
+  <div class="card-header" *ngIf="vacancy?.salary">
+    <!--nxt-border-->
     <h5 class="card-title vac-text font-weight-bold">{{ vacancy?.salary }}</h5>
   </div>
   <div class="card-body">

@@ -1,22 +1,51 @@
-<div class="card nxt-border mb-5 " [routerLink]="['/vacancies', vacancy.id]">
-  <!--shadow-sm-->
-  <div *ngIf="vacancy?.thumbnail_image">
-    <img [src]="vacancy?.thumbnail_image" alt="job_img" class="card-img-top card-img img-fluid" />
-  </div>
-  <div class="card-header" *ngIf="vacancy?.salary">
-    <!--nxt-border-->
-    <h5 class="card-title vac-text font-weight-bold">{{ vacancy?.salary }}</h5>
-  </div>
-  <div class="card-body">
-    <h4 class="card-title font-weight-bold">{{ vacancy?.title }}</h4>
-    <p class="card-text text-truncate">{{ vacancy?.description }}</p>
-  </div>
-  <ul class="list-group list-group-flush border-top border-bottom">
-    <li class="list-group-item">
-      <h5 class="card-subtitle">{{ vacancy?.company?.name }}</h5>
-    </li>
-  </ul>
-  <div class="card-body">
-    <a [routerLink]="['/vacancies', vacancy.id]" class="btn nxt-button">Skatīt</a> <!--(click)="vacancyInfoClick()"-->
-  </div>
+<!--<div class="card nxt-border mb-5 " [routerLink]="['/vacancies', vacancy.id]">-->
+<!--shadow-sm-->
+<!--<div *ngIf="vacancy?.thumbnail_image">
+  <img [src]="vacancy?.thumbnail_image" alt="job_img" class="card-img-top card-img img-fluid" />
 </div>
+<div class="card-header" *ngIf="vacancy?.salary">-->
+<!--nxt-border-->
+<!--<h5 class="card-title vac-text font-weight-bold">{{ vacancy?.salary }}</h5>
+</div>
+<div class="card-body">
+  <h4 class="card-title font-weight-bold">{{ vacancy?.title }}</h4>
+  <p class="card-text text-truncate">{{ vacancy?.description }}</p>
+</div>
+<ul class="list-group list-group-flush border-top border-bottom">
+  <li class="list-group-item">
+    <h5 class="card-subtitle">{{ vacancy?.company?.name }}</h5>
+  </li>
+</ul>
+<div class="card-body">
+  <a [routerLink]="['/vacancies', vacancy.id]" class="btn nxt-button">Skatīt</a>-->
+ <!--(click)="vacancyInfoClick()"-->
+<!--</div>
+</div>-->
+
+<mat-card>
+  <!--fxFlexAlign="stretch"-->
+  <!--class="mat-elevation-z4"-->
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title class="card-clickable" [routerLink]="['/vacancies', vacancy.id]">{{ vacancy?.title }}</mat-card-title>
+    <mat-card-subtitle>{{ vacancy?.salary }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="card-clickable" [src]="vacancy?.thumbnail_image" [routerLink]="['/vacancies', vacancy.id]" alt="job_img" /> <!--class="card-img"-->
+  <mat-card-content>
+    <p>{{ vacancy?.description }}</p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-content class="card-clickable">
+    <div class="company-info" fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+      <p>{{ vacancy?.company?.name }}</p>
+      <div mat-card-avatar class="header-image"></div>
+    </div>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button class="mbtn" color="primary" [routerLink]="['/vacancies', vacancy.id]" mat-flat-button>Skatīt</button>
+    <button class="mbtn" mat-icon-button aria-label="Favorīts">
+      <mat-icon color="primary">favorite</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

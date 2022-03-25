@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -13,6 +14,8 @@ import { VacancyListComponent } from './vacancy/vacancy-list.component';
 import { VacancyCardComponent } from './vacancy/vacancy-card.component';
 import { VacancyService } from './services/vacancy.service';
 import { VacancyDetailsComponent } from './vacancy-details/vacancy-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExportsModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { VacancyDetailsComponent } from './vacancy-details/vacancy-details.compo
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'vacancies', component: VacancyListComponent },
       { path: 'vacancies/:id', component: VacancyDetailsComponent },
-    ])
+    ]),
+    BrowserAnimationsModule,
+    MaterialExportsModule,
+    FlexLayoutModule
   ],
   providers: [
     VacancyService

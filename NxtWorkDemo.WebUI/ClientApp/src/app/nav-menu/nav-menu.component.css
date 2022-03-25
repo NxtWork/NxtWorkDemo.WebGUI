@@ -29,3 +29,28 @@ html {
   color: #ff5722;
   font-weight: bold;
 }
+
+/* mat styles */
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header-image {
+  background-image: url('https://lh3.googleusercontent.com/ogw/ADea4I7C6xGNmJr9ey6Ay1yqQQhFKkmjqF6TaBMIi7vp=s32-c-mo');
+  background-size: cover;
+  background-color: white;
+}
+
+.fg-nxt {
+  color: white;
+}
+
+.icon-text {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.profile-btn {
+    border: 1px solid white;
+}

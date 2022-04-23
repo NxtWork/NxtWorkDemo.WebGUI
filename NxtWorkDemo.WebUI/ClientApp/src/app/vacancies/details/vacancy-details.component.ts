@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Vacancy } from "../models/vacancy.model";
+import { Vacancy } from "../../domain/vacancy.model";
 import { VacancyService } from "../services/vacancy.service";
 
 @Component({

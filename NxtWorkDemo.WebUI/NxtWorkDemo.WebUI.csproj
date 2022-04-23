@@ -30,16 +30,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="ClientApp\node_modules\%40angular\material\prebuilt-themes\nxt-theme-dark.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="ClientApp\node_modules\%40angular\material\prebuilt-themes\nxt-theme.css" />
+    <TypeScriptCompile Remove="ClientApp\src\app\user-auth\model\cv.model.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\user-auth\nxt-user.model.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NxtWorkDemo.Domain\NxtWorkDemo.Core.csproj" />
     <ProjectReference Include="..\NxtWorkDemo.Infrastructure\NxtWorkDemo.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\user-auth\services\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

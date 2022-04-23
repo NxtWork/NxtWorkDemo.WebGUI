@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Inject, Injectable } from "@angular/core";
-import { Vacancy } from "../models/vacancy.model";
+import { Vacancy } from "../../domain/vacancy.model";
 
 @Injectable()
 export class VacancyService {

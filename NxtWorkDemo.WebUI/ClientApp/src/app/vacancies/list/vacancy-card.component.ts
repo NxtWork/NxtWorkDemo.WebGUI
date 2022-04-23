@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { Vacancy } from "../models/vacancy.model";
+import { Vacancy } from "../../domain/vacancy.model";
 
 @Component({
   selector: "app-vacancy-card",

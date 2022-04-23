@@ -31,46 +31,42 @@
     </div>
   </nav>
 </header>-->
-
 <!-- angular material headers -->
-
 <!--<div>
   <mat-toolbar color="primary">
     <div mat-card-avatar class="header-image"></div>
     <span class="fg-nxt">NxtWork</span>
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">-->
+<!---->
+<!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <mat-icon class="fg-nxt">favorite</mat-icon>
+</button>
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <mat-icon class="fg-nxt">share</mat-icon>
+</button>-->
+<!---->
+<!--</div>
+  <div fxShow="true" fxHide.gt-sm="true">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+      <mat-icon class="fg-nxt">menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
 
-      <!---->
-      <!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon class="fg-nxt">favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon class="fg-nxt">share</mat-icon>
-      </button>-->
-      <!---->
-
-    <!--</div>
-    <div fxShow="true" fxHide.gt-sm="true">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
-        <mat-icon class="fg-nxt">menu</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar>
-
-  <mat-sidenav-container fxFlexFill class="example-container">
-    <mat-sidenav #sidenav fxLayout="column">
-      <div fxLayout="column">
-        <button (click)="sidenav.toggle()" href="#" mat-button>Aizvērt</button>-->
-        <!---->
-        <!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon class="fg-nxt">favorite</mat-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon class="fg-nxt">share</mat-icon>
-        </button>-->
-        <!---->
-      <!--</div>
+<mat-sidenav-container fxFlexFill class="example-container">
+  <mat-sidenav #sidenav fxLayout="column">
+    <div fxLayout="column">
+      <button (click)="sidenav.toggle()" href="#" mat-button>Aizvērt</button>-->
+<!---->
+<!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <mat-icon class="fg-nxt">favorite</mat-icon>
+</button>
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <mat-icon class="fg-nxt">share</mat-icon>
+</button>-->
+<!---->
+<!--</div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
   </mat-sidenav-container>
@@ -90,17 +86,22 @@
       <button mat-button [routerLink]="['/about']">Par NxtWork</button>
     </div>
     <div>
-      <button class="profile-btn" mat-stroked-button [routerLink]="['/account']">
-        <span class="icon-text" *ngIf="!deviceXs">Profils</span>
+      <button class="profile-btn" mat-stroked-button [routerLink]="['/testnav']"> <!--account-->
+        <span class="icon-text" [routerLink]="['/test-nav']" *ngIf="!deviceXs">Profils</span> <!--profile-->
         <mat-icon>person</mat-icon>
       </button>
     </div>
   </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-around end">
+  <!--<mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-around end">
     <div *ngIf="deviceXs">
       <button mat-button [routerLink]="['/']">Vakances</button>
       <button mat-button [routerLink]="['/fy']">Tieši Tev</button>
       <button mat-button [routerLink]="['/about']">Par NxtWork</button>
     </div>
-  </mat-toolbar-row>
+  </mat-toolbar-row>-->
 </mat-toolbar>
+<nav *ngIf="deviceXs" mat-tab-nav-bar color="accent">
+  <a class="mat-tab" mat-tab-link [routerLink]="['/']" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">Vakances</a>
+  <a class="mat-tab" mat-tab-link [routerLink]="['/fetch-data']" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">Tieši Tev</a>
+  <a class="mat-tab" mat-tab-link [routerLink]="['/counter']" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">Par Mums</a>
+</nav>

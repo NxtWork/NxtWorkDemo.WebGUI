@@ -58,12 +58,9 @@ mat-card img {
   cursor: pointer;
 }
 
-/*.company-info {
-  padding: 10px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
+mat-card {
+  border: 1px solid rgba(242, 242, 242, .15);
+}
 
 .mbtn {
   color: white;
